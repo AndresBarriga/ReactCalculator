@@ -1,0 +1,70 @@
+/* Calculator.css */
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(6, 6rem);
+  grid-gap: 0.0;
+}
+.span-two {
+  grid-column: span 2 !important;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Adjust the button colors and sizes for specific buttons */
+.calculator-grid > button:active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Style the display area */
+.output {
+  grid-column: 1 / -1;
+  grid-row: 1/2;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  margin-right: 0.5rem; /* Add margin for separation */
+}
+.output .display-operator {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  margin-right: 0.5rem; /* Add margin for separation */
+}
+.output .current-operand {
+  color: white;
+  font-size: 3rem;
+}
+
+/* Style specific buttons */
+.calculator-grid > button.ac {
+  background-color: #f06d6d; /* Adjust the color for AC button */
+  color: white;
+}
+
+.calculator-grid > button.del {
+  background-color: #5A96E3; /* Adjust the color for DEL button */
+  color: white;
+}
+
+/* Add more specific button styles as needed */
